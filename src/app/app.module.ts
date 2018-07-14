@@ -8,14 +8,8 @@ import { Route } from '../../node_modules/@angular/compiler/src/core';
 import { RouterModule,Routes} from '@angular/router';
 
 const Routes: Routes =[
-  {
-    path : 'dasboard',
-    component: DashboardComponent
-  },
-  {
-    path : '**',
-    component: HomeComponent
-  }
+  {path : 'dasboard',component: DashboardComponent},
+  {path : '**', component: HomeComponent}
 ];
 
 export const AppRouting = RouterModule.forRoot(Routes);
