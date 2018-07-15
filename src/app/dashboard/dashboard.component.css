@@ -1,0 +1,12 @@
+.nav  {
+    background-color:#f8f9fa;
+    
+}
+.nav a:hover {
+    background-color:#e0e1e2;
+    color: rgb(0, 134, 252);
+}
+
+.nav .sub-link {
+    padding-left: 4rem;
+}
