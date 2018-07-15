@@ -9,7 +9,15 @@
 .nav .sub-link {
     padding-left: 4rem;
 }
+.nav .fixbg {
+    background-color:#e0e1e2;
+}
+
 i {
     font-size:16px;
     padding-right: 0.5rem;
+}
+
+.nav .box {
+    box-shadow: 5px 5px 15px 5px rgba(119, 119, 119, 0.5);
 }

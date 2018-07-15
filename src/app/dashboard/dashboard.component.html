@@ -16,9 +16,9 @@
     </form>
   </div>
 </header>
-    <ul class="nav flex-column" style="padding-top: 5rem;width: 20%;">
+    <ul class="nav flex-column box" style="padding-top: 5rem;width: 20%;height:50rem;">
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['../dashboard']" href="#"><i class="fa fa-user-circle"></i>Dashboard</a>
+            <a class="nav-link" [routerLink]="['../dashboard']" href="#"><i class="fa fa-dashboard"></i>Dashboard</a>
         </li>
         <li class="nav-item">
                 <a class="nav-link" [routerLink]="['../report']" href="#"><i class="fa fa-sellsy"></i>ออกรายงาน</a>
@@ -27,16 +27,16 @@
             <a class="nav-link collapsed" data-toggle="collapse" data-target="#sale" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-money" aria-hidden="true"></i>ระบบการขาย</a>
             <div id="sale" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-money"></i>จัดการบิล</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-file-text-o"></i>จัดการบิล</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>จัดการโต๊ะ</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-th-large"></i>จัดการโต๊ะ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>เมนูอาหาร</a>
+                    <a class="nav-link sub-link" href="#"><i class="	fa fa-cutlery"></i>เมนูอาหาร</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>ระบบหน้าร้าน</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-calculator"></i>ระบบหน้าร้าน</a>
                 </li>
             </div>
         </li>
@@ -44,39 +44,57 @@
             <a class="nav-link collapsed" data-toggle="collapse" data-target="#stock" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-dropbox"></i>ระบบคลังสินค้า</a>
             <div id="stock" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>ซัพพลายเออร์</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-truck"></i>ซัพพลายเออร์</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>รายการสินค้า</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-clipboard"></i>รายการสินค้า</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>รายการสั่งสินค้า</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-exchange"></i>รายการสั่งสินค้า</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>นำเข้าสินค้า</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-cloud-download"></i>นำเข้าสินค้า</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>นำออกสินค้า</a>
+                    <a class="nav-link sub-link" href="#"><i class="fa fa-cloud-upload"></i>นำออกสินค้า</a>
                 </li>
             </div>
         </li>
         <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" data-target="#salary" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-user-circle"></i>ระบบพนักงาน</a>
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#salary" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-briefcase"></i>ระบบพนักงาน</a>
                 <div id="salary" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <li class="nav-item">
-                        <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>รายชื่อพนักงาน</a>
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-drivers-license-o"></i>รายชื่อพนักงาน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>เวลาทำงาน</a>
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-calendar-check-o"></i>เวลาทำงาน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>คิดค่าตอบแทน</a>
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-money"></i>คิดค่าตอบแทน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>หักเงิน / เพิ่มเงิน</a>
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-refresh"></i>หักเงิน / เพิ่มเงิน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" href="#"><i class="fa fa-user-circle"></i>กฎการเข้างาน</a>
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-sliders"></i>กฎการเข้างาน</a>
                     </li>
                 </div>
             </li>
+            <li class="nav-item">
+                    <a class="nav-link fixbg" >ระบบพนักงาน</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-cogs"></i>ตั้งค่าระบบ</a>
+                <div id="setting" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-group"></i>ผู้ใช้งานระบบ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-database"></i>ข้อมูลโปรแกรม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" href="#"><i class="fa fa-address-book-o"></i>ข้อมูลส่วนตัว</a>
+                    </li>
+                </div>
+            </li>
+    </ul>
