@@ -15,6 +15,7 @@ import { ReportComponent } from './report/report.component';
 const appRoutes: Routes = [
   { path: 'dasboard', component: DashboardComponent },
   { path: 'package', component: PackageComponent },
+  { path: 'report', component: ReportComponent },
   { path: '**', component: HomeComponent }
 ];
 
