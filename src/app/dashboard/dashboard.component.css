@@ -1,14 +1,11 @@
 .nav  {
     background-color:#f8f9fa;
-    color: rgb(15, 15, 15);
     
 }
 .nav a:hover {
     background-color:#e0e1e2;
-    color: rgb(15, 15, 15);
 }
 
 .nav .sub-link {
     padding-left: 4rem;
-    color: rgb(15, 15, 15);
 }
