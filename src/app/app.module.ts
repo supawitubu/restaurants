@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { Route } from '../../node_modules/@angular/compiler/src/core';
 import { routing } from './app.routing';
 import { PackageComponent } from './package/package.component';
+import { ReportComponent } from './report/report.component';
 
 
 const appRoutes: Routes = [
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     DashboardComponent,
     HomeComponent,
-    PackageComponent
+    PackageComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
