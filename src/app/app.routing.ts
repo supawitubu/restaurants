@@ -3,11 +3,13 @@ import { HomeComponent } from './home/home.component';
 import { ModuleWithProviders } from '../../node_modules/@angular/compiler/src/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PackageComponent } from './package/package.component';
+import { ReportComponent } from './report/report.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'package', component: PackageComponent }
+    { path: 'package', component: PackageComponent },
+    { path: 'report', component: ReportComponent }
 
 ]
 
