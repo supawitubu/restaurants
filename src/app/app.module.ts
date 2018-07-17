@@ -10,10 +10,13 @@ import { Route } from '../../node_modules/@angular/compiler/src/core';
 import { routing } from './app.routing';
 import { PackageComponent } from './package/package.component';
 import { ReportComponent } from './report/report.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 
 const appRoutes: Routes = [
-  { path: 'dasboard', component: DashboardComponent },
+  { path: 'menu', component: MenuComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'package', component: PackageComponent },
   { path: 'report', component: ReportComponent },
   { path: '**', component: HomeComponent }
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     HomeComponent,
     PackageComponent,
-    ReportComponent
+    ReportComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
