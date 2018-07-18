@@ -21,3 +21,7 @@ i {
 .box {
     box-shadow: 5px 5px 15px 5px rgba(216, 216, 216, 0.5);
 }
+
+.sub-link.active {
+    background-color: 5px 5px 15px 5px rgba(216, 216, 216, 0.5);
+}
