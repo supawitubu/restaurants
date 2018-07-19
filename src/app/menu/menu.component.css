@@ -1,7 +1,10 @@
 .nav  {
-    background-color:#f8f9fa;
-    
+    background-color:#f8f9fa;    
 }
+.nav a {
+    color:DimGrey;
+}
+
 .nav a:hover {
     background-color:#e0e1e2;
 }
@@ -18,9 +21,6 @@ i {
     padding-right: 0.5rem;
 }
 
-.box {
-    box-shadow: 5px 5px 15px 5px rgba(216, 216, 216, 0.5);
-}
 
 .sub-link.active {
     background-color: 5px 5px 15px 5px rgba(216, 216, 216, 0.5);

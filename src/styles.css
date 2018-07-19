@@ -5,5 +5,42 @@ body {
 }
 .areaall {
     padding-top: 7rem; 
-    padding-left: 22%;
+    padding-left: 17rem;
+}
+
+.box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(197, 197, 197);
+}
+
+.content-container {
+    padding-left: 17rem;
+    padding-right: 2rem;
+    padding-top: 7rem;
+}
+
+.bold1 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.bold2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: DimGrey ;
+}
+td {
+    color: DimGrey ;
+}
+
+tr {
+    color: DimGrey ;
+}
+
+.table .xxx {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
