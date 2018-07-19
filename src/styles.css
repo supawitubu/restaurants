@@ -32,15 +32,13 @@ body {
 }
 td {
     color: DimGrey ;
+    text-align: right;
+}
+
+td .text-center {
+    text-align: center;
 }
 
 tr {
     color: DimGrey ;
-}
-
-.table .xxx {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
 }

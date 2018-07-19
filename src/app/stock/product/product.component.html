@@ -1,5 +1,212 @@
 <app-menu></app-menu>
-<div class="areaall">
-  <p>วัตถุดิบ</p>
+<div class="content-container">
+    <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addsupplier">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มซัพพลายเออร์</button>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </div>
+
+  <div class="card">
+    <div class="card-header bold2">
+      รายการสินค้า
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">สินค้า</th>
+          <th scope="col">จำนวนขั้นต่ำ</th>
+          <th scope="col">จำนวนสูงสุด</th>
+          <th scope="col">จำนวนคงเหลือ</th>
+          <th scope="col">หน่วย : สินค้า</th>
+          <th scope="col">ราคาต้นทุน</th>
+          <th scope="col">หน่วย : เงิน</th>
+          <th scope="col">การกระทำ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>กระดาษชำระ</td>
+          <td class="right-text">5.00</td>
+          <td>10.00</td>
+          <td>8.00</td>
+          <td>แพ๊ค</td>
+          <td>35</td>
+          <td>บาท</td>
+          <td><div class="dropdown text-center">
+              <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" data-toggle="modal" data-target="#edit">
+                  <i class="fa fa-edit"></i>แก้ไข</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#delete">
+                  <i class="fa fa-trash-o"></i>ลบ</a>
+          </div>
+      </div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end">
+      <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+  </div>
 </div>
 
+<div class="modal fade" id="addsupplier" tabindex="-1" role="dialog" aria-labelledby="addsupplier" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addsupplier">เพิ่มสินค้า</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="product_id">รหัสสินค้า</label>
+            <input type="text" class="form-control" id="product_id" placeholder="รหัสสินค้า">
+          </div>
+          <div class="form-group">
+              <label for="product_name">ชื่อสินค้า</label>
+              <input type="text" class="form-control" id="product_name" placeholder="ชื่อสินค้า">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="min_qty">จำนวนขั้นต่ำ</label>
+                  <input type="text" class="form-control" id="min_qty" placeholder="ต่ำสุด">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="max_qty">จำนวนสูงสุด</label>
+                    <input type="text" class="form-control" id="max_qty" placeholder="สูงสุด">
+                </div>               
+                <div class="form-group col-md-4">
+                  <label for="total_qty">จำนวนคงเหลือ</label>
+                  <input type="text" class="form-control" id="total_qty"  placeholder="คงเหลือ">
+                </div>
+              </div>
+          <div class="form-row">
+              <div class="form-group col-md-4">
+                  <label for="state">หน่วย : สินค้า</label>
+                  <select id="state" class="form-control">
+                    <option selected>กิโลกรัม</option>
+                    <option select>กรัม</option>
+                  </select>
+                </div>
+            <div class="form-group col-md-4">
+              <label for="phonenum">ราคาต้นทุน</label>
+              <input type="text" class="form-control" id="phonenum" placeholder="ราคา">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="state">หน่วย : เงิน</label>
+                <select id="state" class="form-control">
+                  <option selected>บาท</option>
+                  <option select>ดอลล่า</option>
+                </select>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="state">หน่วย : เงิน</label>
+              <select id="state" class="form-control">
+                <option selected>ร้าน A</option>
+                <option select>ร้าน B</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+          <button type="button" class="btn btn-primary">บันทึก</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edit">แก้ไขสินค้า</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="namecomp">ชื่อบริษัท</label>
+              <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+            </div>
+            <div class="form-row">
+  
+              <div class="form-group col-md-6">
+                <label for="phonenum">หมายเลขโทรศัพท์</label>
+                <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="emailcomp">อีเมล</label>
+                <input type="email" class="form-control" id="emailcomp" placeholder="อีเมล">
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="inputAddress2">ที่อยู่</label>
+              <input type="text" class="form-control" id="addresscomp" placeholder="เลขที่">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="city">อำเภอ</label>
+                <input type="text" class="form-control" id="city" placeholder="อำเภอ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state">จังหวัด</label>
+                <select id="state" class="form-control">
+                  <option selected>กรุงเทพมหานคร</option>
+                  <option select>ร้อยเอ็ด</option>
+                  <option select>อุบลราชธานี</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="zipcode">รหัสไปรษณีย์</label>
+                <input type="text" class="form-control" id="zipcode"  placeholder="รหัสไปรษณีย์">
+              </div>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

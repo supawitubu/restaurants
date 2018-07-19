@@ -16,7 +16,7 @@
     <div class="card-header bold2">
       Supplier
     </div>
-    <table class="table table-bordered xxx">
+    <table class="table table-bordered">
       <thead>
         <tr class="text-center">
           <th scope="col">#</th>
@@ -33,7 +33,15 @@
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
-          <td>@mdo</td>
+          <td><div class="dropdown text-center">
+              <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" onclick="getdata(6)">
+                  <i class="fa fa-edit"></i>แก้ไข</a>
+              <a href="delete.php?key=6" class="dropdown-item">
+                  <i class="fa fa-trash-o"></i>ลบ</a>
+          </div>
+      </div></td>
         </tr>
       </tbody>
     </table>
