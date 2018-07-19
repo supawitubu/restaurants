@@ -2,8 +2,8 @@
 <div class="content-container">
     <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
         <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addsupplier">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มซัพพลายเออร์</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addproduct">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มสินค้า</button>
           </div>
           <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -19,6 +19,7 @@
       <thead>
         <tr class="text-center">
           <th scope="col">#</th>
+          <th scope="col">รหัส</th>
           <th scope="col">สินค้า</th>
           <th scope="col">จำนวนขั้นต่ำ</th>
           <th scope="col">จำนวนสูงสุด</th>
@@ -31,20 +32,21 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>กระดาษชำระ</td>
-          <td class="right-text">5.00</td>
+          <th class="text-center" scope="row">1</th>
+          <td class="text-left">0001</td>
+          <td class="text-left">กระดาษชำระ</td>
+          <td>5.00</td>
           <td>10.00</td>
           <td>8.00</td>
           <td>แพ๊ค</td>
-          <td>35</td>
+          <td>35.00</td>
           <td>บาท</td>
           <td><div class="dropdown text-center">
               <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" data-toggle="modal" data-target="#edit">
+              <a class="dropdown-item btn" data-toggle="modal" data-target="#editproduct">
                   <i class="fa fa-edit"></i>แก้ไข</a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#delete">
+              <a class="dropdown-item btn" data-toggle="modal" data-target="#delete">
                   <i class="fa fa-trash-o"></i>ลบ</a>
           </div>
       </div></td>
@@ -78,11 +80,11 @@
   </div>
 </div>
 
-<div class="modal fade" id="addsupplier" tabindex="-1" role="dialog" aria-labelledby="addsupplier" aria-hidden="true">
+<div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="addproduct" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addsupplier">เพิ่มสินค้า</h5>
+        <h5 class="modal-title" id="addproduct">เพิ่มสินค้า</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -114,27 +116,27 @@
               </div>
           <div class="form-row">
               <div class="form-group col-md-4">
-                  <label for="state">หน่วย : สินค้า</label>
-                  <select id="state" class="form-control">
+                  <label for="product_qty">หน่วย : สินค้า</label>
+                  <select id="product_qty" class="form-control">
                     <option selected>กิโลกรัม</option>
                     <option select>กรัม</option>
                   </select>
                 </div>
             <div class="form-group col-md-4">
-              <label for="phonenum">ราคาต้นทุน</label>
+              <label for="price">ราคาต้นทุน</label>
               <input type="text" class="form-control" id="phonenum" placeholder="ราคา">
             </div>
             <div class="form-group col-md-4">
-                <label for="state">หน่วย : เงิน</label>
-                <select id="state" class="form-control">
+                <label for="money_qty">หน่วย : เงิน</label>
+                <select id="money_qty" class="form-control">
                   <option selected>บาท</option>
                   <option select>ดอลล่า</option>
                 </select>
               </div>
           </div>
           <div class="form-group">
-              <label for="state">หน่วย : เงิน</label>
-              <select id="state" class="form-control">
+              <label for="supplier">ซัพพลายเออร์</label>
+              <select id="supplier" class="form-control">
                 <option selected>ร้าน A</option>
                 <option select>ร้าน B</option>
               </select>
@@ -150,11 +152,11 @@
   </div>
 </div>
 
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+<div class="modal fade" id="editproduct" tabindex="-1" role="dialog" aria-labelledby="editproduct" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="edit">แก้ไขสินค้า</h5>
+          <h5 class="modal-title" id="editproduct">แก้ไขสินค้า</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -162,43 +164,55 @@
         <form>
           <div class="modal-body">
             <div class="form-group">
-              <label for="namecomp">ชื่อบริษัท</label>
-              <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+              <label for="product_id">รหัสสินค้า</label>
+              <input type="text" class="form-control" id="product_id" placeholder="รหัสสินค้า">
             </div>
-            <div class="form-row">
-  
-              <div class="form-group col-md-6">
-                <label for="phonenum">หมายเลขโทรศัพท์</label>
-                <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="emailcomp">อีเมล</label>
-                <input type="email" class="form-control" id="emailcomp" placeholder="อีเมล">
-              </div>
-            </div>
-  
             <div class="form-group">
-              <label for="inputAddress2">ที่อยู่</label>
-              <input type="text" class="form-control" id="addresscomp" placeholder="เลขที่">
-            </div>
+                <label for="product_name">ชื่อสินค้า</label>
+                <input type="text" class="form-control" id="product_name" placeholder="ชื่อสินค้า">
+              </div>
+  
+              <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="min_qty">จำนวนขั้นต่ำ</label>
+                    <input type="text" class="form-control" id="min_qty" placeholder="ต่ำสุด">
+                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="max_qty">จำนวนสูงสุด</label>
+                      <input type="text" class="form-control" id="max_qty" placeholder="สูงสุด">
+                  </div>               
+                  <div class="form-group col-md-4">
+                    <label for="total_qty">จำนวนคงเหลือ</label>
+                    <input type="text" class="form-control" id="total_qty"  placeholder="คงเหลือ">
+                  </div>
+                </div>
             <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="product_qty">หน่วย : สินค้า</label>
+                    <select id="product_qty" class="form-control">
+                      <option selected>กิโลกรัม</option>
+                      <option select>กรัม</option>
+                    </select>
+                  </div>
               <div class="form-group col-md-4">
-                <label for="city">อำเภอ</label>
-                <input type="text" class="form-control" id="city" placeholder="อำเภอ">
+                <label for="price">ราคาต้นทุน</label>
+                <input type="text" class="form-control" id="phonenum" placeholder="ราคา">
               </div>
               <div class="form-group col-md-4">
-                <label for="state">จังหวัด</label>
-                <select id="state" class="form-control">
-                  <option selected>กรุงเทพมหานคร</option>
-                  <option select>ร้อยเอ็ด</option>
-                  <option select>อุบลราชธานี</option>
+                  <label for="money_qty">หน่วย : เงิน</label>
+                  <select id="money_qty" class="form-control">
+                    <option selected>บาท</option>
+                    <option select>ดอลล่า</option>
+                  </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="supplier">ซัพพลายเออร์</label>
+                <select id="supplier" class="form-control">
+                  <option selected>ร้าน A</option>
+                  <option select>ร้าน B</option>
                 </select>
               </div>
-              <div class="form-group col-md-4">
-                <label for="zipcode">รหัสไปรษณีย์</label>
-                <input type="text" class="form-control" id="zipcode"  placeholder="รหัสไปรษณีย์">
-              </div>
-            </div>
           </div>
   
           <div class="modal-footer">
@@ -209,4 +223,3 @@
       </div>
     </div>
   </div>
-  

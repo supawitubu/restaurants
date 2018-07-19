@@ -1,4 +1,298 @@
 <app-menu></app-menu>
-<div class="areaall">
-  <p>พนักงาน</p>
-</div>
+<div class="content-container">
+    <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
+        
+                <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addemproyee">
+                      <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มพนักงาน</button>
+                  </div>     
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+    </div>
+    
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">พนักงานทั้งหมด</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">พนักงาน Full-time</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">พนักงาน Part-Time</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">  
+          <div class="card">
+            <table class="table table-bordered">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">#</th>
+                  <th scope="col">รหัสพนักงาน</th>
+                  <th scope="col">ชื่อ - นามสกุล</th>
+                  <th scope="col">ชื่อเล่น</th>
+                  <th scope="col">กฎเข้างาน</th>
+                  <th scope="col">ค่าตอบแทน</th>
+                  <th scope="col">ค่าล่วงเวลา</th>
+                  <th scope="col">ค่ารถ/ค่าอาหาร</th>
+                  <th scope="col">งานก่อนเวลา</th>
+                  <th scope="col">การกระทำ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-center" scope="row">1</th>
+                  <td class="text-left">0001</td>
+                  <td class="text-left">นายณัฐพัฒน์ โพธิ์จันดี</td>
+                  <td>บลู</td>
+                  <td>ทั้งวัน</td>
+                  <td>15,000</td>
+                  <td>0</td>
+                  <td>55</td>
+                  <td class="text-center"><button type="button" class="btn btn-warning">ปิด</button></td>
+                  <td><div class="dropdown text-center">
+                      <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item btn" data-toggle="modal" data-target="#editproduct">
+                          <i class="fa fa-edit"></i>แก้ไข</a>
+                      <a class="dropdown-item btn" data-toggle="modal" data-target="#delete">
+                          <i class="fa fa-trash-o"></i>ลบ</a>
+                  </div>
+              </div></td>
+                </tr>
+              </tbody>
+            </table>
+        
+            <div class="d-flex justify-content-end">
+              <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="card">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr class="text-center">
+                      <th scope="col">#</th>
+                      <th scope="col">รหัสพนักงาน</th>
+                      <th scope="col">ชื่อ - นามสกุล</th>
+                      <th scope="col">ชื่อเล่น</th>
+                      <th scope="col">กฎเข้างาน</th>
+                      <th scope="col">ค่าตอบแทน</th>
+                      <th scope="col">ค่าล่วงเวลา</th>
+                      <th scope="col">ค่ารถ/ค่าอาหาร</th>
+                      <th scope="col">งานก่อนเวลา</th>
+                      <th scope="col">การกระทำ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="text-center" scope="row">1</th>
+                      <td class="text-left">0001</td>
+                      <td class="text-left">นายณัฐพัฒน์ โพธิ์จันดี</td>
+                      <td>บลู</td>
+                      <td>ทั้งวัน</td>
+                      <td>15,000</td>
+                      <td>0</td>
+                      <td>55</td>
+                      <td class="text-center"><button type="button" class="btn btn-warning">ปิด</button></td>
+                      <td><div class="dropdown text-center">
+                          <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item btn" data-toggle="modal" data-target="#editproduct">
+                              <i class="fa fa-edit"></i>แก้ไข</a>
+                          <a class="dropdown-item btn" data-toggle="modal" data-target="#delete">
+                              <i class="fa fa-trash-o"></i>ลบ</a>
+                      </div>
+                  </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+            
+                <div class="d-flex justify-content-end">
+                  <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#">Previous</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="card">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr class="text-center">
+                      <th scope="col">#</th>
+                      <th scope="col">รหัสพนักงาน</th>
+                      <th scope="col">ชื่อ - นามสกุล</th>
+                      <th scope="col">ชื่อเล่น</th>
+                      <th scope="col">กฎเข้างาน</th>
+                      <th scope="col">ค่าตอบแทน</th>
+                      <th scope="col">ค่าล่วงเวลา</th>
+                      <th scope="col">ค่ารถ/ค่าอาหาร</th>
+                      <th scope="col">งานก่อนเวลา</th>
+                      <th scope="col">การกระทำ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="text-center" scope="row">1</th>
+                      <td class="text-left">0002</td>
+                      <td class="text-left">นางสาวรวี  ทิ้งโคตร   </td>
+                      <td>กวาง</td>
+                      <td>บ่าย</td>
+                      <td>40</td>
+                      <td>45</td>
+                      <td>55</td>
+                      <td class="text-center"><button type="button" class="btn btn-success">เปิด</button></td>
+                      <td><div class="dropdown text-center">
+                          <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item btn" data-toggle="modal" data-target="#editproduct">
+                              <i class="fa fa-edit"></i>แก้ไข</a>
+                          <a class="dropdown-item btn" data-toggle="modal" data-target="#delete">
+                              <i class="fa fa-trash-o"></i>ลบ</a>
+                      </div>
+                  </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+            
+                <div class="d-flex justify-content-end">
+                  <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#">Previous</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="addemproyee" tabindex="-1" role="dialog" aria-labelledby="addemproyee" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addemproyee">เพิ่มพนักงาน</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+<div class="text-left" style="padding-left: 10px;padding-top: 10px;"><label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label></div>
+              
+              <form>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="em_id">RFID</label>
+                    <input type="text" class="form-control" id="em_id" placeholder="รหัสพนักงาน">
+                  </div>
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <label for="em_name">ชื่อ</label>
+                      <input type="text" class="form-control" id="em_name" placeholder="ชื่อ">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="em_s_name">นาสมกุล</label>
+                        <input type="text" class="form-control" id="em_s_name" placeholder="นาสมกุล">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="nickname">ชื่อเล่น</label>
+                          <input type="text" class="form-control" id="nickname" placeholder="ชื่อเล่น">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="rule">กฎเข้างาน</label>
+                            <select id="rule" class="form-control">
+                                <option selected>เช้า</option>
+                                <option select>บ่าย</option>
+                                <option select>ทั้งวัน</option>
+                              </select>
+                        </div>  
+                        <div class="form-group col-md-4">
+                            <label for="compensation">ค่าตอบแทน</label>
+                            <input type="text" class="form-control" id="compensation" placeholder="บาท">
+                        </div>              
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-md-4">
+                              <label for="ot">ค่าล่วงเวลา</label>
+                              <input type="text" class="form-control" id="ot"  placeholder="บาท">
+                            </div>
+                          <div class="form-group col-md-4">
+                              <label for="food">ค่าอาหาร/ค่ารถ</label>
+                              <input type="text" class="form-control" id="food" placeholder="บาท">
+                          </div>
+                      
+                        <div class="form-group col-md-4">
+                            <label for="b_ot">งานก่อนเวลา</label>
+                            <select id="b_ot" class="form-control">
+                                <option selected>ปิด</option>
+                                <option select>เปิด</option>
+                              </select>
+                          </div>
+                          </div>
+                </div>
+        
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                  <button type="button" class="btn btn-primary">บันทึก</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>

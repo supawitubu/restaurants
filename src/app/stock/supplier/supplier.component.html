@@ -14,7 +14,7 @@
 
   <div class="card">
     <div class="card-header bold2">
-      Supplier
+        รายชื่อซัพพลายเออร์
     </div>
     <table class="table table-bordered">
       <thead>
@@ -29,16 +29,16 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th scope="row" class="text-center">1</th>
+          <td class="text-left">Mark</td>
+          <td class="text-left">Otto</td>
+          <td class="text-left">@mdo</td>
           <td><div class="dropdown text-center">
               <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" onclick="getdata(6)">
+          <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item btn" data-toggle="modal" data-target="#editsupplier" >
                   <i class="fa fa-edit"></i>แก้ไข</a>
-              <a href="delete.php?key=6" class="dropdown-item">
+              <a class="dropdown-item btn">
                   <i class="fa fa-trash-o"></i>ลบ</a>
           </div>
       </div></td>
@@ -131,3 +131,63 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="editsupplier" tabindex="-1" role="dialog" aria-labelledby="editsupplier" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editsupplier">แก้ไขซัพพลายเออร์</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="namecomp">ชื่อบริษัท</label>
+              <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+            </div>
+            <div class="form-row">
+  
+              <div class="form-group col-md-6">
+                <label for="phonenum">หมายเลขโทรศัพท์</label>
+                <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="emailcomp">อีเมล</label>
+                <input type="email" class="form-control" id="emailcomp" placeholder="อีเมล">
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="inputAddress2">ที่อยู่</label>
+              <input type="text" class="form-control" id="addresscomp" placeholder="เลขที่">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="city">อำเภอ</label>
+                <input type="text" class="form-control" id="city" placeholder="อำเภอ">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state">จังหวัด</label>
+                <select id="state" class="form-control">
+                  <option selected>กรุงเทพมหานคร</option>
+                  <option select>ร้อยเอ็ด</option>
+                  <option select>อุบลราชธานี</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="zipcode">รหัสไปรษณีย์</label>
+                <input type="text" class="form-control" id="zipcode"  placeholder="รหัสไปรษณีย์">
+              </div>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
