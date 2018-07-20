@@ -164,6 +164,16 @@ i {
     color: white;
 }
 
+.bg-purple {
+    background-color:rgb(63,81,181);
+    color: white;
+}
+
+.bg-green-2 {
+    background-color:#339966;
+    color: white;
+}
+
 .padding {
     padding-left: 10px;
     padding-top: 10px;
