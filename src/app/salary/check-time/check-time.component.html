@@ -2,8 +2,8 @@
 <div class="content-container">
     <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
         <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addsupplier">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มซัพพลายเออร์</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addtime">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มเวลาทำงาน</button>
           </div>
           <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -14,38 +14,33 @@
   <div class="card">
     <div class="card-header bold2">
         คำนวณเวลา
-        <md-content ng-app="MyApp" ng-controller="AppCtrl as ctrl" layout-padding layout-margin>
-            <md-datepicker ng-model="ctrl.myDate" ng-change="ctrl.onDateChanged()"
-                           md-placeholder="Enter date"></md-datepicker>
-            Date: {{ctrl.myDate | date:shortDate}}
-          </md-content>
+        </div>
 
 
-    <table class="table table-bordered">
+    <table class="table table-bordered text-center">
       <thead>
-        <tr class="text-center">
+        <tr>
           <th scope="col">#</th>
-          <th scope="col">ชื่อบริษัท</th>
-          <th scope="col">หมายเลขโทรศัพท์</th>
-          <th scope="col">ที่อยู่</th>
+          <th scope="col">รหัสพนักงาน</th>
+          <th scope="col">ชื่อ - นามสกุล</th>
+          <th scope="col">ชื่อเล่น</th>
+          <th scope="col">ประเภทพนักงาน</th>
+          <th scope="col">สรุปเวลาทำงาน</th>
           <th scope="col">การกระทำ</th>
 
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row" class="text-center">1</th>
-          <td class="text-left">Mark</td>
-          <td class="text-left">Otto</td>
-          <td class="text-left">@mdo</td>
-          <td><div class="dropdown text-center">
-              <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-          <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item btn" data-toggle="modal" data-target="#editsupplier" >
-                  <i class="fa fa-edit"></i>แก้ไข</a>
-              <a class="dropdown-item btn">
-                  <i class="fa fa-trash-o"></i>ลบ</a>
-          </div>
+          <th scope="row">1</th>
+          <td class="text-center">0003</td>
+          <td class="text-left">supawit</td>
+          <td class="text-left">เก่ง</td>
+          <td class="text-left">Full-time</td>
+          <td class="text-center">169:23:30</td>
+          <td><div class="text-center">
+              <a class="btn">
+                  <i class="fa fa-eye"></i>ดูรายละเอียด</a>
       </div></td>
         </tr>
       </tbody>
@@ -77,11 +72,11 @@
   </div>
 </div>
 
-<div class="modal fade" id="addsupplier" tabindex="-1" role="dialog" aria-labelledby="addsupplier" aria-hidden="true">
+<div class="modal fade" id="addtime" tabindex="-1" role="dialog" aria-labelledby="addtime" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addsupplier">เพิ่มซัพพลายเออร์</h5>
+        <h5 class="modal-title" id="addtime">เพิ่มเวลาทำงาน</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -89,42 +84,30 @@
       <form>
         <div class="modal-body">
           <div class="form-group">
-            <label for="namecomp">ชื่อบริษัท</label>
-            <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+            <label for="namecomp">ชื่อพนักงาน</label>
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
           </div>
           <div class="form-row">
 
             <div class="form-group col-md-6">
-              <label for="phonenum">หมายเลขโทรศัพท์</label>
-              <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+              <label for="work_start">เวลาเข้างาน</label>
+              <input type="date" name="work_start" class="form-control" id="work_start">
             </div>
             <div class="form-group col-md-6">
-              <label for="emailcomp">อีเมล</label>
-              <input type="email" class="form-control" id="emailcomp" placeholder="อีเมล">
+              <label for="word_end">เวลาเลิกงาน</label>
+              <input type="date" name="word_end" class="form-control" id="word_end">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="inputAddress2">ที่อยู่</label>
-            <input type="text" class="form-control" id="addresscomp" placeholder="เลขที่">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="city">อำเภอ</label>
-              <input type="text" class="form-control" id="city" placeholder="อำเภอ">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="state">จังหวัด</label>
-              <select id="state" class="form-control">
-                <option selected>กรุงเทพมหานคร</option>
-                <option select>ร้อยเอ็ด</option>
-                <option select>อุบลราชธานี</option>
+            <label for="inputAddress2">สถานะ</label>
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
               </select>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="zipcode">รหัสไปรษณีย์</label>
-              <input type="text" class="form-control" id="zipcode"  placeholder="รหัสไปรษณีย์">
-            </div>
           </div>
         </div>
 
