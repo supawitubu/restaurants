@@ -1,4 +1,207 @@
 <app-menu></app-menu>
-<div class="areaall">
-  <p>กฎการเข้างาน</p>
+<div class="content-container">
+    <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addrule">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มกฎ</button>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+    </div>
+
+  <div class="card">
+    <div class="card-header bold2">
+        กฎการเข้างาน
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">กฎ</th>
+          <th scope="col">เวลาเข้างาน</th>
+          <th scope="col">เวลาเข้าสาย</th>
+          <th scope="col">เวลาเลิกงาน</th>
+          <th scope="col">ล่วงเวลา</th>
+          <th scope="col">พัก(นาที)</th>
+          <th scope="col">หักเข้าสาย</th>
+          <th scope="col">หักขาดงาน</th>
+          <th scope="col">การกระทำ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center">
+          <th scope="row" class="text-center">1</th>
+          <td class="text-center">เช้า</td>
+          <td class="text-center">08:00:00</td>
+          <td class="text-center">08:30:00</td>
+          <td class="text-center">19:00:00</td>
+          <td class="text-center">19:00:00</td>
+          <td class="text-center">60</td>
+          <td class="text-center">20</td>
+          <td class="text-center">50</td>
+          <td><div class="dropdown text-center">
+              <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+          <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item btn" data-toggle="modal" data-target="#editrule" >
+                  <i class="fa fa-edit"></i>แก้ไข</a>
+              <a class="dropdown-item btn">
+                  <i class="fa fa-trash-o"></i>ลบ</a>
+          </div>
+      </div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end">
+      <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+  </div>
 </div>
+
+<div class="modal fade" id="addrule" tabindex="-1" role="dialog" aria-labelledby="addrule" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addrule">เพิ่มกฎ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="namecomp">ชื่อกฎ</label>
+            <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="work_start">เวลาเข้างาน</label>
+              <input type="time" name="work_start">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="work_late">เวลาเข้าสาย</label>
+              <input type="time" name="work_late">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="work_end">เวลาเลิกงาน</label>
+                <input type="time" name="work_end">
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="work_ot">งานล่วงเวลา</label>
+                <input type="time" name="work_ot">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="work_stop">ตัดลืมลงเวลาออก</label>
+                <input type="time" name="work_stop">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="work_pause">เวลาพัก</label>
+                    <input type="text" class="form-control" id="work_pause" placeholder="นาที">
+                  </div>
+                <div class="form-group col-md-4">
+                  <label for="late">หักเงินเข้าสาย</label>
+                  <input type="text" class="form-control" id="late" placeholder="บาท">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="absence">หักเงินขาดงาน</label>
+                  <input type="email" class="form-control" id="absence" placeholder="บาท">
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+          <button type="button" class="btn btn-primary">บันทึก</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editrule" tabindex="-1" role="dialog" aria-labelledby="editrule" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addrule">แก้ไขกฎ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="namecomp">ชื่อกฎ</label>
+                <input type="text" class="form-control" id="namecomp" placeholder="บริษัท">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="work_start">เวลาเข้างาน</label>
+                  <input type="time" name="work_start">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="work_late">เวลาเข้าสาย</label>
+                  <input type="time" name="work_late">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="work_end">เวลาเลิกงาน</label>
+                    <input type="time" name="work_end">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="work_ot">งานล่วงเวลา</label>
+                    <input type="time" name="work_ot">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="work_stop">ตัดลืมลงเวลาออก</label>
+                    <input type="time" name="work_stop">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="work_pause">เวลาพัก</label>
+                        <input type="text" class="form-control" id="work_pause" placeholder="นาที">
+                      </div>
+                    <div class="form-group col-md-4">
+                      <label for="late">หักเงินเข้าสาย</label>
+                      <input type="text" class="form-control" id="late" placeholder="บาท">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="absence">หักเงินขาดงาน</label>
+                      <input type="email" class="form-control" id="absence" placeholder="บาท">
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+              <button type="button" class="btn btn-primary">บันทึก</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
