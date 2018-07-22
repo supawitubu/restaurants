@@ -1,5 +1,161 @@
 <app-menu></app-menu>
-<div class="areaall">
-  <p>ข้อมูลผู้ใช้</p>
+
+<div class="content-container">
+  <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
+    <div>
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="card-header bold2">
+      ข้อมูลส่วนตัว
+    </div>
+
+    <div class="d-flex flex-row bd-highlight mb-3 flex-wrap">
+      <div class="p-2 bd-highlight">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Upload รูปภาพ</label>
+          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">ขนาดแนะนำ 500x500 pixel</small>
+        </div>
+      </div>
+      <div class="p-2 bd-highlight">
+        <div data-spy="scroll">
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="p-2 bd-highlight">
+                <p>ชื่อ - นามสกุล</p>
+                <p>ชื่อเล่น</p>
+                <p>หมายเลขโทรศัพท์</p>
+                <p>E-mail</p>
+                <p>รหัสผ่าน</p>
+                <p>ระดับ</p>
+              </div>
+              <div class="p-2 bd-highlight">
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+              </div>
+              <div class="p-2 bd-highlight">
+                <p>นายศุภวิทย์ พลทะกลาง</p>
+                <p>เก่ง</p>
+                <p>0830541969</p>
+                <p>supawit.ubu@gmail.com</p>
+                <p>**********</p>
+                <p>Supper Administrator</p>
+                <div class="dropdown text-center">
+                  <a class="btn btn-warning bold" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ตัวเลือก</a>
+                  <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item btn" data-toggle="modal" data-target="#editprofile">
+                      <i class="fa fa-edit"></i>แก้ไขข้อมูลส่วนตัว</a>
+                    <a class="dropdown-item btn" data-toggle="modal" data-target="#changepassword">
+                      <i class="fa fa-cog"></i>เปลี่ยนรหัสผ่าน</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+  <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="editprofile" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editprofile">แก้ไขข้อมูลส่วนตัว</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="u_name">ชื่อ-นามสกุล</label>
+              <input type="text" class="form-control" id="username" placeholder="ชื่อ - นามสกุล">
+            </div>
+            <div class="form-group">
+              <label for="nick_name">ชื่อเล่น</label>
+              <input type="text" class="form-control" id="nickname" placeholder="ชื่อเล่น">
+            </div>
+            <div class="form-group">
+              <label for="phonenum">หมายเลขโทรศัพท์</label>
+              <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-labelledby="changepassword" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changepassword">เปลี่ยนรหัสผ่าน</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key" style="font-size:16px"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="old_password" placeholder="Old Password ">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key" style="font-size:16px"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="newpassword" placeholder="New-Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key" style="font-size:16px"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="renewpassword" placeholder="Re New-Password">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

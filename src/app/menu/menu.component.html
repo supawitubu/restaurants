@@ -1,107 +1,145 @@
 <div>
-<div>
-    <ul class="nav flex-column box fixed-top" style="padding-top: 5rem;width: 15rem;height: 100%;">
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['../dashboard']" [routerLinkActive]="['fixbg']"><i class="fa fa-dashboard" style="color:DodgerBlue "></i>Dashboard</a>
-        </li>
-        <li class="nav-item">
-                <a class="nav-link" [routerLink]="['../report']" [routerLinkActive]="['fixbg']"><i class="fa fa-sellsy" style="color:DarkOrange"></i>ออกรายงาน</a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link collapsed"  data-toggle="collapse" data-target="#sale" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-money" style="color:DarkOrchid"></i>ระบบการขาย</a>
-            <div id="sale" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../bill']" [routerLinkActive]="['fixbg']"><i class="fa fa-file-text-o" style="color:DodgerBlue "></i>จัดการบิล</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../table']" [routerLinkActive]="['fixbg']"><i class="fa fa-th-large" style="color:DodgerBlue "></i>จัดการโต๊ะ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../list-menu']" [routerLinkActive]="['fixbg']"><i class="fa fa-cutlery" style="color:DodgerBlue "></i>เมนูอาหาร</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../pos']" [routerLinkActive]="['fixbg']"><i class="fa fa-calculator" style="color:DodgerBlue "></i>ระบบหน้าร้าน</a>
-                </li>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-toggle="collapse" data-target="#stock" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-dropbox" style="color:Red "></i>ระบบคลังสินค้า</a>
-            <div id="stock" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../supplier']" [routerLinkActive]="['fixbg']"><i class="fa fa-truck" style="color:DodgerBlue "></i>ซัพพลายเออร์</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../product']" [routerLinkActive]="['fixbg']"><i class="fa fa-clipboard" style="color:DodgerBlue "></i>รายการสินค้า</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../order']" [routerLinkActive]="['fixbg']"><i class="fa fa-exchange" style="color:DodgerBlue "></i>รายการสั่งสินค้า</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../import-product']" [routerLinkActive]="['fixbg']"><i class="fa fa-cloud-download" style="color:DodgerBlue "></i>นำเข้าสินค้า</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link sub-link" [routerLink]="['../export-product']" [routerLinkActive]="['fixbg']"><i class="fa fa-cloud-upload" style="color:DodgerBlue "></i>นำออกสินค้า</a>
-                </li>
-            </div>
-        </li>
-        <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" data-target="#salary" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-briefcase" style="color:LimeGreen  "></i>ระบบเงินเดือน ค่าตอบแทน</a>
+    <div>
+        <ul class="nav flex-column box fixed-top" style="padding-top: 5rem;width: 15rem;height: 100%;">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['../dashboard']" [routerLinkActive]="['fixbg']">
+                    <i class="fa fa-dashboard" style="color:DodgerBlue "></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['../report']" [routerLinkActive]="['fixbg']">
+                    <i class="fa fa-sellsy" style="color:DarkOrange"></i>ออกรายงาน</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#sale" aria-expanded="false" aria-controls="collapseTwo"
+                    href="#">
+                    <i class="fa fa-money" style="color:DarkOrchid"></i>ระบบการขาย</a>
+                <div id="sale" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../bill']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-file-text-o" style="color:DodgerBlue "></i>จัดการบิล</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../table']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-th-large" style="color:DodgerBlue "></i>จัดการโต๊ะ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../list-menu']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-cutlery" style="color:DodgerBlue "></i>เมนูอาหาร</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../pos']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-calculator" style="color:DodgerBlue "></i>ระบบหน้าร้าน</a>
+                    </li>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#stock" aria-expanded="false" aria-controls="collapseTwo"
+                    href="#">
+                    <i class="fa fa-dropbox" style="color:Red "></i>ระบบคลังสินค้า</a>
+                <div id="stock" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../supplier']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-truck" style="color:DodgerBlue "></i>ซัพพลายเออร์</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../product']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-clipboard" style="color:DodgerBlue "></i>รายการสินค้า</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../order']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-exchange" style="color:DodgerBlue "></i>รายการสั่งสินค้า</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../import-product']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-cloud-download" style="color:DodgerBlue "></i>นำเข้าสินค้า</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sub-link" [routerLink]="['../export-product']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-cloud-upload" style="color:DodgerBlue "></i>นำออกสินค้า</a>
+                    </li>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#salary" aria-expanded="false" aria-controls="collapseTwo"
+                    href="#">
+                    <i class="fa fa-briefcase" style="color:LimeGreen  "></i>ระบบเงินเดือน ค่าตอบแทน</a>
                 <div id="salary" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../emproyee']" [routerLinkActive]="['fixbg']"><i class="fa fa-drivers-license-o" style="color:DodgerBlue "></i>รายชื่อพนักงาน</a>
+                        <a class="nav-link sub-link" [routerLink]="['../emproyee']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-drivers-license-o" style="color:DodgerBlue "></i>รายชื่อพนักงาน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../check-time']" [routerLinkActive]="['fixbg']"><i class="fa fa-calendar-check-o" style="color:DodgerBlue "></i>เวลาทำงาน</a>
+                        <a class="nav-link sub-link" [routerLink]="['../check-time']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-calendar-check-o" style="color:DodgerBlue "></i>เวลาทำงาน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../calculate-salary']" [routerLinkActive]="['fixbg']"><i class="fa fa-money" style="color:DodgerBlue "></i>คิดค่าตอบแทน</a>
+                        <a class="nav-link sub-link" [routerLink]="['../calculate-salary']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-money" style="color:DodgerBlue "></i>คิดค่าตอบแทน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../del-add-money']" [routerLinkActive]="['fixbg']"><i class="fa fa-refresh" style="color:DodgerBlue "></i>หักเงิน / เพิ่มเงิน</a>
+                        <a class="nav-link sub-link" [routerLink]="['../del-add-money']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-refresh" style="color:DodgerBlue "></i>หักเงิน / เพิ่มเงิน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../set-time']" [routerLinkActive]="['fixbg']"><i class="fa fa-sliders" style="color:DodgerBlue "></i>กฎการเข้างาน</a>
+                        <a class="nav-link sub-link" [routerLink]="['../set-time']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-sliders" style="color:DodgerBlue "></i>กฎการเข้างาน</a>
                     </li>
                 </div>
             </li>
             <li class="nav-item">
-                    <a class="nav-link fixbg" >ระบบพนักงาน</a> 
+                <a class="nav-link fixbg">ระบบพนักงาน</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="collapseTwo" href="#"><i class="fa fa-cogs" style="color:DodgerBlue "></i>ตั้งค่าระบบ</a>
+                <a class="nav-link collapsed" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="collapseTwo"
+                    href="#">
+                    <i class="fa fa-cogs" style="color:DodgerBlue "></i>ตั้งค่าระบบ</a>
                 <div id="setting" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../user']" [routerLinkActive]="['fixbg']"><i class="fa fa-group" style="color:DodgerBlue "></i>ผู้ใช้งานระบบ</a>
+                        <a class="nav-link sub-link" [routerLink]="['../user']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-group" style="color:DodgerBlue "></i>ผู้ใช้งานระบบ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../profile']" [routerLinkActive]="['fixbg']"><i class="fa fa-database" style="color:DodgerBlue "></i>ข้อมูลส่วนตัว</a>
+                        <a class="nav-link sub-link" [routerLink]="['../profile']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-address-book-o" style="color:DodgerBlue "></i>ข้อมูลส่วนตัว</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sub-link" [routerLink]="['../backup']" [routerLinkActive]="['fixbg']"><i class="fa fa-address-book-o" style="color:DodgerBlue "></i>ข้อมูลโปรแกรม</a>
+                        <a class="nav-link sub-link" [routerLink]="['../backup']" [routerLinkActive]="['fixbg']">
+                            <i class="fa fa-database" style="color:DodgerBlue "></i>ข้อมูลโปรแกรม</a>
                     </li>
                 </div>
             </li>
-    </ul>
-    <header class="navbar navbar-expand-lg fixed-top navbar-light bg-light box">
-        <a class="navbar-brand" href="#">
-          <img src="/assets/img/restaurant.ico" width="48" height="48" class="d-inline-block align-top" alt="">
-        </a>
-        <a class="navbar-brand bold1" [routerLink]="['../dashboard']" [routerLinkActive]="['fixbg']">Restaurants</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
-            
-          <form class="form-inline my-2 my-lg-0 ">
-            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" [routerLink]="['']">
-              <i class="fa fa-user-circle"></i> Sign out
+        </ul>
+        <header class="navbar navbar-expand-lg fixed-top navbar-light bg-light box">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/restaurant.ico" width="48" height="48" class="d-inline-block align-top" alt="">
+            </a>
+            <a class="navbar-brand bold1" [routerLink]="['../dashboard']" [routerLinkActive]="['fixbg']">Restaurants</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </form>
-          <i class="fa fa-bell" aria-hidden="true"></i>
-          <i class="fa fa-user-times" aria-hidden="true"></i>
-          <i class="fa fa-users" aria-hidden="true"></i>
-        </div>
-      </header>
-  </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="fa fa-bell btn" aria-hidden="true" href="#"></a>
+                    <a class="fa fa-user-times btn" aria-hidden="true" href="#"></a>
+                    <a class="fa fa-users btn" aria-hidden="true" href="#"></a>
+                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" [routerLink]="['']">
+                        <i class="fa fa-user-circle"></i> Sign out
+                    </button>
+                </form>
+            </div>
+        </header>
+    </div>

@@ -23,7 +23,7 @@ import { OrderComponent } from './stock/order/order.component';
 import { ImportProductComponent } from './stock/import-product/import-product.component';
 import { ExportProductComponent } from './stock/export-product/export-product.component';
 import { SalaryComponent } from './salary/salary.component';
-import { EmproyeeComponent } from './salary/emproyee/emproyee.component';
+import { EmployeeComponent } from './salary/employee/employee.component';
 import { CheckTimeComponent } from './salary/check-time/check-time.component';
 import { CalculateSalaryComponent } from './salary/calculate-salary/calculate-salary.component';
 import { DelAddMoneyComponent } from './salary/del-add-money/del-add-money.component';
@@ -53,7 +53,7 @@ const appRoutes: Routes = [
   { path: 'import-product', component: ImportProductComponent },
   { path: 'export-product', component: ExportProductComponent },
   { path: 'salary', component: SalaryComponent },
-  { path: 'emproyee', component: EmproyeeComponent },
+  { path: 'employee', component: EmployeeComponent },
   { path: 'check-time', component: CheckTimeComponent },
   { path: 'calculate-salary', component: CalculateSalaryComponent },
   { path: 'del-add-money', component: DelAddMoneyComponent },
@@ -88,7 +88,7 @@ const appRoutes: Routes = [
     ImportProductComponent,
     ExportProductComponent,
     SalaryComponent,
-    EmproyeeComponent,
+    EmployeeComponent,
     CheckTimeComponent,
     CalculateSalaryComponent,
     DelAddMoneyComponent,

@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ModuleWithProviders } from '../../node_modules/@angular/compiler/src/core';
+import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PackageComponent } from './package/package.component';
 import { ReportComponent } from './report/report.component';
@@ -17,7 +17,7 @@ import { OrderComponent } from './stock/order/order.component';
 import { ImportProductComponent } from './stock/import-product/import-product.component';
 import { ExportProductComponent } from './stock/export-product/export-product.component';
 import { SalaryComponent } from './salary/salary.component';
-import { EmproyeeComponent } from './salary/emproyee/emproyee.component';
+import { EmployeeComponent } from './salary/employee/employee.component';
 import { CheckTimeComponent } from './salary/check-time/check-time.component';
 import { CalculateSalaryComponent } from './salary/calculate-salary/calculate-salary.component';
 import { DelAddMoneyComponent } from './salary/del-add-money/del-add-money.component';
@@ -45,7 +45,7 @@ const appRoutes: Routes = [
     { path: 'import-product', component: ImportProductComponent },
     { path: 'export-product', component: ExportProductComponent },
     { path: 'salary', component: SalaryComponent },
-    { path: 'emproyee', component: EmproyeeComponent },
+    { path: 'emproyee', component: EmployeeComponent },
     { path: 'check-time', component: CheckTimeComponent },
     { path: 'calculate-salary', component: CalculateSalaryComponent },
     { path: 'del-add-money', component: DelAddMoneyComponent },

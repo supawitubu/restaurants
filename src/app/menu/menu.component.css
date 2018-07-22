@@ -9,6 +9,14 @@
     background-color:#e0e1e2;
 }
 
+.nav b {
+    color:rgb(4, 0, 255);
+}
+
+.nav b:hover {
+    background-color:#ff0000;
+}
+
 .nav .sub-link {
     padding-left: 4rem;
 }

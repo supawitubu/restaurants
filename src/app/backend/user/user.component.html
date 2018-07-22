@@ -1,5 +1,218 @@
 <app-menu></app-menu>
-<div class="areaall">
-  <p>ผู้ใช้</p>
+
+<div class="content-container">
+    <div class="d-flex justify-content-between" style="padding-bottom: 1rem;">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adduser">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มผู้ใช้งาน</button>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </div>
+
+  <div class="card">
+    <div class="card-header bold2">
+        รายชื่อผู้ใช้
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">ชื่อ - นามสกุล</th>
+          <th scope="col">ชื่อเล่น</th>
+          <th scope="col">หมายเลขโทรศัพท์</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">รหัสผ่าน</th>
+          <th scope="col">ระดับ</th>
+          <th scope="col">การกระทำ</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-center">1</th>
+          <td class="text-left">ศุภวิทย์ พลทะกลาง</td>
+          <td class="text-center">เก่ง</td>
+          <td class="text-left">0830541969</td>
+          <td class="text-left">supawit.ubu@gmail.com</td>
+          <td class="text-center"><i class="fa fa-eye"></i></td>
+          <td class="text-center">Supper Administrator</td>
+          <td><div class="dropdown text-center">
+              <a class="fa fa-ellipsis-h btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+          <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item btn" data-toggle="modal" data-target="#edituser" >
+                  <i class="fa fa-edit"></i>แก้ไข</a>
+              <a class="dropdown-item btn">
+                  <i class="fa fa-trash-o"></i>ลบ</a>
+          </div>
+      </div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end">
+      <nav aria-label="Page navigation example" style="padding-right: 1rem;">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+  </div>
 </div>
 
+<div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="adduser" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="adduser">เพิ่มผู้ใช้งาน</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="u_name">ชื่อ-นามสกุล</label>
+            <input type="text" class="form-control" id="username" placeholder="ชื่อ - นามสกุล">
+          </div>
+          <div class="form-group">
+            <label for="nick_name">ชื่อเล่น</label>
+            <input type="text" class="form-control" id="nickname" placeholder="ชื่อเล่น">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="phonenum">หมายเลขโทรศัพท์</label>
+              <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">อีเมล</label>
+              <input type="email" class="form-control" id="email" placeholder="อีเมล">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="u_name">สิทธิ์</label>
+            <select id="permission" class="form-control">
+              <option selected>Supper Administrator</option>
+              <option select>Administrator</option>
+              <option select>Manager</option>
+              <option select>Cashier</option>
+              <option select>Employee</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-key" style="font-size:16px"></i>
+                </div>
+              </div>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-key" style="font-size:16px"></i>
+                </div>
+              </div>
+              <input type="password" class="form-control" id="repassword" placeholder="Re-Password">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+          <button type="button" class="btn btn-primary">บันทึก</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="edituser" tabindex="-1" role="dialog" aria-labelledby="edituser" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edituser">แก้ไขผู้ใช้</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="u_name">ชื่อ-นามสกุล</label>
+              <input type="text" class="form-control" id="username" placeholder="ชื่อ - นามสกุล">
+            </div>
+            <div class="form-group">
+              <label for="nick_name">ชื่อเล่น</label>
+              <input type="text" class="form-control" id="nickname" placeholder="ชื่อเล่น">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="phonenum">หมายเลขโทรศัพท์</label>
+                <input type="text" class="form-control" id="phonenum" placeholder="หมายเลขโทรศัพท์">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">อีเมล</label>
+                <input type="email" class="form-control" id="email" placeholder="อีเมล">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="u_name">สิทธิ์</label>
+              <select id="permission" class="form-control">
+                <option selected>Supper Administrator</option>
+                <option select>Administrator</option>
+                <option select>Manager</option>
+                <option select>Cashier</option>
+                <option select>Employee</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key" style="font-size:16px"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key" style="font-size:16px"></i>
+                  </div>
+                </div>
+                <input type="password" class="form-control" id="repassword" placeholder="Re-Password">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
