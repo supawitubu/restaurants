@@ -45,7 +45,7 @@ const appRoutes: Routes = [
     { path: 'import-product', component: ImportProductComponent },
     { path: 'export-product', component: ExportProductComponent },
     { path: 'salary', component: SalaryComponent },
-    { path: 'emproyee', component: EmployeeComponent },
+    { path: 'employee', component: EmployeeComponent },
     { path: 'check-time', component: CheckTimeComponent },
     { path: 'calculate-salary', component: CalculateSalaryComponent },
     { path: 'del-add-money', component: DelAddMoneyComponent },
